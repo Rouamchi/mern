@@ -1,0 +1,33 @@
+.cards {
+  /* border: 2px red solid; */
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 25px black;
+  width: 60%;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 20px;
+  padding: 20px;
+  /* display: flex; */
+}
+
+.card{
+  /* border: 2px rgb(0, 4, 255) solid; */
+  display: flex;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 40px 20px;
+  padding: 20px;
+  width: 320px;
+  color: #141414;
+  transition: 0,2s;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-around;
+}
+
+.card:hover{
+  border: 1px solid gray;
+  border-left: 8px solid gray;
+}

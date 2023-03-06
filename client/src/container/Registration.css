@@ -1,0 +1,38 @@
+.inputs {
+  /* border: 2px red solid; */
+  margin-bottom: 80px;
+  box-shadow: 5px 5px 25px black;
+  width: 30%;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 20px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  display: block;
+  text-align: center;
+}
+
+#outlined-basic{
+  /* border: 2px red solid; */
+  text-align: center;
+}
+
+.textfield{
+  margin-bottom: 6px;
+}
+
+
+.select{
+  /* border: 2px rgb(55, 0, 255) solid; */
+  text-align: center;
+  width: 224px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.send{
+  margin-top: 10px;
+  margin-left: 155px;
+
+}
