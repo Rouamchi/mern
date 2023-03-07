@@ -4,18 +4,21 @@ import Header from "../components/Header";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import { useLocalStorage } from "react-use-storage";
 import './Login.css'
-// import { redirect } from "react-router-dom";
 
 function Login() {
 
-  const [error, response] = useState([])
+  const [islogin, setIslogin, removeIslogin] = useLocalStorage("islogin", false);
+  const [memberId, setmemberId, removememberId] = useLocalStorage("memberId", '');
+
+
+  const [error] = useState([])
   const url = "http://localhost:4000/members/login"
   const [data, setData] = useState({
     username: "",
     password: "",
   });
-
 
   function handle(e) {
     const newdata = { ...data }
@@ -30,15 +33,17 @@ function Login() {
       username: data.username,
       password: data.password,
     })
-
       .then(res => {
         console.log(res.data)
-      })
-      .then(res => {
-        window.location = '/'
+        // window.location = '/'
       })
       .catch(error)
-      console.log(Login)
+    console.log(Login)
+
+    if (islogin.ok) {
+      setIslogin(true)
+      setmemberId(islogin._id)
+    }
 
   }
 
@@ -64,3 +69,7 @@ function Login() {
   );
 }
 export default Login;
+
+//////////////////////////////////
+
+

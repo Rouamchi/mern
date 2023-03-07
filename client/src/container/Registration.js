@@ -50,17 +50,16 @@ function Registration() {
       email: data.email,
       gender: data.gender
     })
-      .then(res => {
-        console.log(res.data)
-      })
-      .then(res => {
-        window.location = '/login'
-      })
-      .catch(error)
-      // if (res.ok) {
-      //   window.location = '/login'
-      // }
-      
+    .then(res => {
+      console.log(res.data)
+      // window.location = '/login'
+    })
+    .catch(error)
+
+    // if(res.ok){
+    //   window.location = '/login'
+    // }
+
     // setMessage(data.msg)
   }
 
@@ -69,11 +68,11 @@ function Registration() {
       <div className="Home-container">
         <Header />
         <div className="inputs">
-          <div className="textfield"><TextField id="username" label="Username"  value={data.username} onChange={(e) => { handle(e) }} /></div>
-          <div className="textfield"><TextField id="password" label="Password"  value={data.password} onChange={(e) => { handle(e) }} /></div>
-          <div className="textfield"><TextField id="fullname" label="Fullname"  value={data.fullname} onChange={(e) => { handle(e) }} /></div>
+          <div className="textfield"><TextField id="username" label="Username" value={data.username} onChange={(e) => { handle(e) }} /></div>
+          <div className="textfield"><TextField id="password" label="Password" value={data.password} onChange={(e) => { handle(e) }} /></div>
+          <div className="textfield"><TextField id="fullname" label="Fullname" value={data.fullname} onChange={(e) => { handle(e) }} /></div>
           <div className="textfield"><TextField id="birthdate" label="BirthDate" value={data.birthdate} onChange={(e) => { handle(e) }} /></div>
-          <div className="textfield"><TextField id="email" label="Email"  value={data.email} onChange={(e) => { handle(e) }} /></div>
+          <div className="textfield"><TextField id="email" label="Email" value={data.email} onChange={(e) => { handle(e) }} /></div>
           <div className="select">
             <Box>
               <FormControl fullWidth>

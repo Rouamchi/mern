@@ -48,9 +48,11 @@ router.post('/', async function (req, res, next) {
       birthdate,
       createdAt: new Date(),
     })
-    res.send(newMember)
+    res.send({newMember, ok: true})
+
   }
 })
+
 ///////////////////////////////////////////////////////////
 // Check member
 router.post('/login', async function (req, res, next) {
@@ -60,10 +62,10 @@ router.post('/login', async function (req, res, next) {
     password
   })
   if(member){
-    res.send({state: 'Successfully logged in'})
+    res.send({state: 'Successfully logged in', ok: true, _id: member._id})
 
   }else{
-    res.send({state: 'Can not find this member, Please Check again'})
+    res.send({state: 'Can not find this member, Please Check again', ok: false})
   }
 })
 
