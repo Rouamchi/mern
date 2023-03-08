@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Axios from 'axios'
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -9,8 +10,8 @@ import './Login.css'
 
 function Login() {
 
-  const [islogin, setIslogin, removeIslogin] = useLocalStorage("islogin", false);
-  const [memberId, setmemberId, removememberId] = useLocalStorage("memberId", '');
+  // const [islogin, setIslogin, removeIslogin] = useLocalStorage("islogin", false);
+  // const [memberId, setmemberId, removememberId] = useLocalStorage("memberId", '');
 
 
   const [error] = useState([])
@@ -38,12 +39,13 @@ function Login() {
         // window.location = '/'
       })
       .catch(error)
-    console.log(Login)
+    // console.log(Login)
 
-    if (islogin.ok) {
-      setIslogin(true)
-      setmemberId(islogin._id)
-    }
+    // if (islogin.ok) {
+    //   setIslogin(true)
+    //   setmemberId(islogin._id)
+    //   console.log(islogin._id)
+    // }
 
   }
 
@@ -64,6 +66,7 @@ function Login() {
             </Stack>
           </div>
         </div>
+        <Footer/>
       </div>
     </>
   );

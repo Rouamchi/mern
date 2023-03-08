@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Axios from 'axios'
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
@@ -101,6 +102,7 @@ function Registration() {
             {/* <div>{message}</div> */}
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

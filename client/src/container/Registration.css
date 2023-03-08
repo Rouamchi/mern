@@ -1,15 +1,31 @@
-.inputs {
-  /* border: 2px red solid; */
-  margin-bottom: 80px;
+/* .inputs {
+  border: 2px red solid;
   box-shadow: 5px 5px 25px black;
   width: 30%;
   margin-top: 40px;
+  margin-bottom: 40px;
   margin-right: auto;
   margin-left: auto;
   border-radius: 20px;
   padding-top: 50px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   display: block;
+  text-align: center;
+} */
+
+.inputs {
+  color: #1b1b1b;
+
+  height: calc(100vh - 128.64px);
+
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 50px;
+
+  display: block;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
 }
 
@@ -32,7 +48,19 @@
 }
 
 .send{
+
   margin-top: 10px;
   margin-left: 155px;
+  /* height: calc(100vh - 128.64px);
+
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 50px;
+
+  display: block;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center; */
 
 }
