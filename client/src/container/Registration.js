@@ -20,9 +20,9 @@ function Registration() {
     setGender(e.target.value);
   };
 
-  // const [message, setMessage] = useState('')
+  const [message, setMessage] = useState('')
 
-  const [error, res] = useState([])
+  const [error] = useState([])
   const url = "http://localhost:4000/members"
   const [data, setData] = useState({
     username: "",
@@ -51,17 +51,15 @@ function Registration() {
       email: data.email,
       gender: data.gender
     })
-    .then(res => {
-      console.log(res.data)
-      // window.location = '/login'
-    })
-    .catch(error)
+      .then(res => {
+        console.log(res.data)
+        setMessage(res.data.msg)
+      })
+      .catch(error)
 
     // if(res.ok){
     //   window.location = '/login'
     // }
-
-    // setMessage(data.msg)
   }
 
   return (
@@ -99,8 +97,8 @@ function Registration() {
                 Send
               </Button>
             </Stack>
-            {/* <div>{message}</div> */}
           </div>
+          <div className="message">{message}</div>
         </div>
         <Footer />
       </div>

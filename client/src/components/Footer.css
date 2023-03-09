@@ -1,11 +1,13 @@
 .myfooter footer {
   background-color: #1b1b1b;
+  /* border: 2px red solid; */
 
   padding: 20px 0;
   text-align: center;
   font-size: 18px;
+
 }
 
-.myfooter .mohammed{
-  background-color: #1976d2;;
+.myfooter .mohammed {
+  background-color: #1976d2;
 }

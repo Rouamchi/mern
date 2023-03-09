@@ -11,7 +11,7 @@ import './Login.css'
 function Login() {
 
   // const [islogin, setIslogin, removeIslogin] = useLocalStorage("islogin", false);
-  // const [memberId, setmemberId, removememberId] = useLocalStorage("memberId", '');
+  // const [memberId, setMemberId, removeMemberId] = useLocalStorage("memberId", '');
 
 
   const [error] = useState([])
@@ -36,15 +36,18 @@ function Login() {
     })
       .then(res => {
         console.log(res.data)
+        // setIslogin(true)
+        // setMemberId(res.data._id)
+        // console.log(res.data._id)
         // window.location = '/'
       })
       .catch(error)
     // console.log(Login)
 
-    // if (islogin.ok) {
+    // if (data.ok) {
     //   setIslogin(true)
-    //   setmemberId(islogin._id)
-    //   console.log(islogin._id)
+    //   setmemberId(data._id)
+    //   console.log(data._id)
     // }
 
   }
@@ -66,7 +69,7 @@ function Login() {
             </Stack>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

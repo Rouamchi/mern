@@ -20,6 +20,15 @@
 }
 
 .login{
-  margin-top: 10px;
-  margin-left: 300px;
+    /* border: 2px rgb(55, 0, 255) solid; */
+
+    width: 78px;
+    margin: auto;
+    margin-top: 10px;
+  
+    display: block;
+    justify-content: center;
+    align-items: center;
+  
+    text-align: center;
 }

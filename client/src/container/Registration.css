@@ -1,21 +1,6 @@
-/* .inputs {
-  border: 2px red solid;
-  box-shadow: 5px 5px 25px black;
-  width: 30%;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 20px;
-  padding-top: 50px;
-  padding-bottom: 30px;
-  display: block;
-  text-align: center;
-} */
-
 .inputs {
+  /* border: 2px red solid; */
   color: #1b1b1b;
-
   height: calc(100vh - 128.64px);
 
   font-size: 30px;
@@ -27,19 +12,20 @@
   align-items: center;
 
   text-align: center;
+  margin-top: 60px;
 }
 
-#outlined-basic{
+#outlined-basic {
   /* border: 2px red solid; */
   text-align: center;
 }
 
-.textfield{
+.textfield {
   margin-bottom: 6px;
 }
 
 
-.select{
+.select {
   /* border: 2px rgb(55, 0, 255) solid; */
   text-align: center;
   width: 224px;
@@ -47,20 +33,31 @@
   margin-left: auto;
 }
 
-.send{
+.send {
+  /* border: 2px rgb(55, 0, 255) solid; */
 
+  width: 96px;
+  margin: auto;
   margin-top: 10px;
-  margin-left: 155px;
-  /* height: calc(100vh - 128.64px);
-
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 50px;
 
   display: block;
   justify-content: center;
   align-items: center;
 
-  text-align: center; */
+  text-align: center;
 
+}
+
+.message{
+  /* border: 2px rgb(55, 0, 255) solid; */
+  font-size: 15px;
+  margin: auto;
+  margin-top: 10px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+  background-color: rgb(182, 181, 181);
+  border-radius: 10px;
 }
