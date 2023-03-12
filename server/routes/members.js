@@ -62,6 +62,13 @@ router.post('/login', async function (req, res, next) {
   })
   if (member) {
     res.send({ state: 'Successfully logged in', ok: true, _id: member._id })
+    
+    // res.redirect("/home")
+
+    // .then((res) => { res.json({ mylink: "/home" }) })
+    // .catch((err) => {
+    //   console.log(err)
+    // })
 
   } else {
     res.send({ state: 'Can not find this member, Please Check again', ok: false })

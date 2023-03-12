@@ -1,0 +1,36 @@
+.homebackground{
+  top: 0;
+  /* bottom: 0; */
+  left: 0;
+  right: 0;
+  position:fixed;
+  background-position: center;
+  background-image: url(../images/homebackground.avif);
+  background-size:cover ;
+}
+
+.title{
+  color: #1b1b1b;
+  text-shadow: 5px 5px 20px black;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hometitle{
+  color: rgb(17, 17, 17);
+  text-shadow: 5px 5px 10px black;
+  margin-top: 190px;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

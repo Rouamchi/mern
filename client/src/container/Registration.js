@@ -54,18 +54,18 @@ function Registration() {
       .then(res => {
         console.log(res.data)
         setMessage(res.data.msg)
+        window.location = '/login'
       })
       .catch(error)
-
-    // if(res.ok){
-    //   window.location = '/login'
-    // }
+      // if (data.ok) {
+      //   window.location = '/login'
+      // }
   }
-
   return (
     <>
-      <div className="Home-container">
+      <div className="Home-container registrationbackground">
         <Header />
+        <div className="title">Forum Read and Express</div>
         <div className="inputs">
           <div className="textfield"><TextField id="username" label="Username" value={data.username} onChange={(e) => { handle(e) }} /></div>
           <div className="textfield"><TextField id="password" label="Password" value={data.password} onChange={(e) => { handle(e) }} /></div>

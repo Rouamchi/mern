@@ -180,8 +180,8 @@ export default function Header() {
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
             <MenuItem onClick={() => {
-              window.location = '/'
-            }}>Muntada</MenuItem>
+              window.location = '/home'
+            }}>FORUM</MenuItem>
           </Typography>
           <Search>
             <SearchIconWrapper>
