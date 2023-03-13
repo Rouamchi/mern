@@ -5,13 +5,13 @@ import Footer from "../components/Footer";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-// import { useLocalStorage } from "react-use-storage";
+import { useLocalStorage } from "react-use-storage";
 import './Login.css'
 
 function Login() {
 
-  // const [islogin, setIslogin, removeIslogin] = useLocalStorage("islogin", false);
-  // const [memberId, setMemberId, removeMemberId] = useLocalStorage("memberId", '');
+  const [islogin, setIslogin, removeIslogin] = useLocalStorage("islogin", false);
+  const [memberId, setMemberId, removeMemberId] = useLocalStorage("memberId", '');
 
   const [message, setMessage] = useState('')
   const [error] = useState([])
@@ -37,7 +37,10 @@ function Login() {
       .then(res => {
         console.log(res.data)
         setMessage(res.data.state)
+        setIslogin(true)
+        setMemberId(res.data._id)
         window.location = '/home'
+        console.log(res.data._id)
       })
       // .then((data) => window.location.href = data.mylink)
       .catch(error)
@@ -47,7 +50,7 @@ function Login() {
 
     // if (data.ok) {
     //   setIslogin(true)
-    //   setmemberId(data._id)
+    //   setMemberId(data._id)
     //   console.log(data._id)
     // }
 
@@ -57,7 +60,7 @@ function Login() {
     <>
       <div className="Home-container loginbackground" >
         <Header />
-        <div className="title">Forum Read and Express</div>
+        <div className="login-title">Forum Read and Express</div>
         <div className="inputs-login">
           <div className="textfield">
             <TextField id="username" label="Username" value={data.username} onChange={(e) => { handle(e) }} /></div>

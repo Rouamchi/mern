@@ -9,22 +9,9 @@
   background-size:cover ;
 }
 
-.title{
-  color: #1b1b1b;
-  text-shadow: 5px 5px 20px black;
-  margin-bottom: 10px;
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .hometitle{
-  color: rgb(17, 17, 17);
-  text-shadow: 5px 5px 10px black;
+  color: orange;
+  text-shadow: 5px 5px 10px rgb(109, 109, 109);
   margin-top: 190px;
   font-size: 45px;
   font-weight: bold;
