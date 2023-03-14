@@ -5,7 +5,6 @@ import CardContent from '@mui/material/CardContent';
 // import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-// import Topics from "../container/topics";
 import './Cards.css'
 
 export default function Cards() {
@@ -39,8 +38,7 @@ export default function Cards() {
                 <Button size="small">Share</Button>
                 <Button size="small"
                 onClick={() => {
-                  window.location = `/section/topics`}}
-                  >
+                  window.location = `/topics`}}>
                   Show Topics</Button>
               </CardActions>
             </Card>

@@ -77,7 +77,8 @@
 
 .registration-title{
   color: #1b1b1b;
-  text-shadow: 5px 5px 20px black;
+  text-shadow: 5px 5px 20px rgb(114, 114, 114);
+  margin-top: 80px;
   margin-bottom: 10px;
   font-size: 30px;
   font-weight: bold;

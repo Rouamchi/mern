@@ -4,8 +4,9 @@ const Topics = require('../schemas/topics.schema');
 
 /* GET users listing. */
 router.get('/', async function (req, res, next) {
-  const { section } = req.body
-  const topics = await Topics.find({ section })
+  // const { section } = req.body
+  // const topics = await Topics.find({ section })
+  const topics = await Topics.find()
   res.send(topics);
 });
 

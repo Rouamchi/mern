@@ -1,6 +1,6 @@
 // import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
-import Cards from "../components/Cards";
+import Cards from "./Cards";
 import Footer from "../components/Footer";
 import './Home.css'
 // import useFetch from 'use-http'
