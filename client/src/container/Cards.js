@@ -10,14 +10,16 @@ import './Cards.css'
 export default function Cards() {
 
   const [sections, setSections] = useState([])
-  const [error] = useState([])
+  // const [error] = useState([])
 
 
   useEffect(() => {
     fetch('http://localhost:4000/sections')
       .then(response => response.json())
       .then(res => setSections(res))
-      .catch(error)
+      .catch((err) => {
+        console.log(err)
+      })
 
   }, [])
   return (

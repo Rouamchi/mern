@@ -22,7 +22,7 @@ function Registration() {
 
   const [message, setMessage] = useState('')
 
-  const [error] = useState([])
+  //const [error] = useState([])
   const url = "http://localhost:4000/members"
   const [data, setData] = useState({
     username: "",
@@ -54,9 +54,13 @@ function Registration() {
       .then(res => {
         console.log(res.data)
         setMessage(res.data.msg)
-        window.location = '/login'
+        //  if (data.ok) {
+        //    window.location = '/login'
+        //  }
       })
-      .catch(error)
+      .catch((err) => {
+        console.log(err)
+      })
     // if (data.ok) {
     //   window.location = '/login'
     // }

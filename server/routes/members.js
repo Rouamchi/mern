@@ -62,7 +62,7 @@ router.post('/login', async function (req, res, next) {
   })
   if (member) {
     res.send({ state: 'Successfully logged in', ok: true, _id: member._id })
-    
+
     // res.redirect("/home")
 
     // .then((res) => { res.json({ mylink: "/home" }) })

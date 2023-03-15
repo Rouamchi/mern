@@ -14,7 +14,7 @@ function Login() {
   const [memberId, setMemberId, removeMemberId] = useLocalStorage("memberId", '');
 
   const [message, setMessage] = useState('')
-  const [error] = useState([])
+  //const [error] = useState([])
   const url = "http://localhost:4000/members/login"
   const [data, setData] = useState({
     username: "",
@@ -39,11 +39,13 @@ function Login() {
         setMessage(res.data.state)
         setIslogin(true)
         setMemberId(res.data._id)
-        window.location = '/home'
+        // window.location = '/home'
         console.log(res.data._id)
       })
       // .then((data) => window.location.href = data.mylink)
-      .catch(error)
+      .catch((err) => {
+        console.log(err)
+      })
     // if (data.state.ok) {
     //    window.location = '/home'
     // }

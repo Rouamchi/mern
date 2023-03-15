@@ -19,11 +19,6 @@ const Header = () => {
             <NavLink className="navlink" onClick={() => {
          window.location = '/registration'}}>Registration
             </NavLink>
-            {/* <ul className="sub-ul">
-              <li><Link>Full Course</Link></li>
-              <li><Link>Crash Course</Link></li>
-              <li><Link>learn in 1h</Link></li>
-            </ul> */}
           </li>
           <li className="main-list">
             <NavLink className="navlink" onClick={() => {
@@ -34,14 +29,6 @@ const Header = () => {
                 setIslogin(false)
                window.location = '/login'
              }}>Log Out</Link></li>
-              {/* <li><Link>CSS Examples</Link></li>
-              <li className="mini-projects"><Link>mini projects&nbsp; + </Link>
-                <ul className="sub-sub-ul">
-                  <li><Link>project 1</Link></li>
-                  <li><Link>project 2</Link></li>
-                  <li><Link>project 3</Link></li>
-                </ul>
-              </li> */}
             </ul>
           </li>
           <li className="main-list">

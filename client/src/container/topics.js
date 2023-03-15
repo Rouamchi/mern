@@ -12,15 +12,30 @@ import Footer from "../components/Footer";
 
 export default function Topics() {
 
-  const [topics, setTopics] = useState([])
-  const [error] = useState([])
-
+  const [sections, setSections] = useState([])
   const [members, setMembers] = useState([])
+  const [topics, setTopics] = useState([])
+  //const [error] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:4000/sections')
+      .then(response => response.json())
+      .then(res => setSections(res))
+      .catch((err) => {
+        console.log(err)
+      })
+    console.log("sections", sections)
+
+  }, [])
+
   useEffect(() => {
     fetch('http://localhost:4000/members')
       .then(response => response.json())
       .then(res => setMembers(res))
-      .catch(error)
+      .catch((err) => {
+        console.log(err)
+      })
+    console.log("members", members)
 
   }, [])
 
@@ -28,7 +43,9 @@ export default function Topics() {
     fetch('http://localhost:4000/topics')
       .then(response => response.json())
       .then(res => setTopics(res))
-      .catch(error)
+      .catch((err) => {
+        console.log(err)
+      })
 
   }, [])
 
@@ -38,6 +55,7 @@ export default function Topics() {
       <div className="cardstopics">
         {topics.map(
           (topic) => {
+
             return (
               <div>
                 <Card className="cardtopics" sx={{ maxWidth: 345 }}>
@@ -51,23 +69,17 @@ export default function Topics() {
                   </CardContent>
                   <CardActions>
                     <Button size="small">Share</Button>
-                    <Button size="small"
-                    // onClick={() => {
-                    //   window.location = `/section/topics`}}
-                    >
-                      Show Détails</Button>
+                    <Button size="small">Show Détails</Button>
                   </CardActions>
                 </Card>
-                <div>
-                  {members.map(
-                    (member) => {
-                      return (
-                        <div className="member">
-                          By: {topic.member.fullname}
-                        </div>)
-                    }
-                  )}
+                <div className="member">
+                  By: {topic.member.fullname}
                 </div>
+
+                <div className="member">
+                  Section: {topic.section.name}
+                </div>
+
               </div>)
           }
         )}
