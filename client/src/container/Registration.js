@@ -43,27 +43,24 @@ function Registration() {
 
   function click(e) {
     e.preventDefault();
-    Axios.post(url, {
-      username: data.username,
-      password: data.password,
-      fullname: data.fullname,
-      birthdate: data.birthdate,
-      email: data.email,
-      gender: data.gender
-    })
-      .then(res => {
-        console.log(res.data)
-        setMessage(res.data.msg)
-        //  if (data.ok) {
-        //    window.location = '/login'
-        //  }
+      Axios.post(url, {
+        username: data.username,
+        password: data.password,
+        fullname: data.fullname,
+        birthdate: data.birthdate,
+        email: data.email,
+        gender: data.gender
       })
-      .catch((err) => {
-        console.log(err)
-      })
-    // if (data.ok) {
-    //   window.location = '/login'
-    // }
+        .then(res => {
+          console.log(res.data)
+          setMessage(res.data.msg)
+          //if(data.ok){
+          window.location = '/login'
+          //}
+        })
+        .catch((err) => {
+          console.log(err)
+        })
   }
   return (
     <>

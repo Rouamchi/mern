@@ -39,7 +39,7 @@ function Login() {
         setMessage(res.data.state)
         setIslogin(true)
         setMemberId(res.data._id)
-        // window.location = '/home'
+        window.location = '/home'
         console.log(res.data._id)
       })
       // .then((data) => window.location.href = data.mylink)

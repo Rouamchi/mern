@@ -27,7 +27,7 @@ export default function Cards() {
       {sections.map(
         (section) => {
           return (<div>
-            <Card className="card" sx={{ maxWidth: 345 }}>
+            <Card className="card" key={section._id} sx={{ maxWidth: 345 }}>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                 {section.name}
@@ -40,7 +40,8 @@ export default function Cards() {
                 <Button size="small">Share</Button>
                 <Button size="small"
                 onClick={() => {
-                  window.location = `/topics`}}>
+                  window.location = `/topics/${section.name}`}}
+                  >
                   Show Topics</Button>
               </CardActions>
             </Card>
@@ -51,6 +52,3 @@ export default function Cards() {
     </div>
   )
 }
-
-// onClick={() => {
-//   window.location = `/section/section._id`}}

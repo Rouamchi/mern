@@ -9,9 +9,11 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const sectionsRouter = require('./routes/sections');
 const membersRouter = require('./routes/members');
-const topicsRouter = require('./routes/topics');
+const topicsSportRouter = require('./routes/topicsSport');
+const topicsNewsRouter = require('./routes/topicsNews');
+const topicsArtRouter = require('./routes/topicsArt');
 const commentsRouter = require('./routes/comments');
-
+const topicsDetailsRouter = require('./routes/topicsDetails')
 const app = express();
 
 
@@ -48,8 +50,11 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/sections', sectionsRouter);
 app.use('/members', membersRouter);
-app.use('/topics', topicsRouter);
+app.use('/topicsSport', topicsSportRouter);
+app.use('/topicsNews', topicsNewsRouter);
+app.use('/topicsArt', topicsArtRouter);
 app.use('/comments', commentsRouter);
+app.use('/topicsDetails', topicsDetailsRouter);
 
 
 // catch 404 and forward to error handler

@@ -12,7 +12,7 @@ const Header = () => {
         <h1>
           <Link onClick={() => {
                window.location = '/home'
-             }}>Forum ' Read and Express '</Link>
+             }}>Forum Read and Express</Link>
         </h1>
         <ul className="flex">
           <li className="main-list">
@@ -33,12 +33,21 @@ const Header = () => {
           </li>
           <li className="main-list">
             <NavLink className="navlink" onClick={() => {
-               window.location = '/topics'}}> Articles
+               window.location = '/home'}}> Articles
             </NavLink>
             <ul className="sub-ul sub-of-js">
-              <li><Link>Sport Article</Link></li>
-              <li><Link>News Article</Link></li>
-              <li><Link>Art Article</Link></li>
+              <li><Link
+              onClick={() => {
+                window.location = '/topics/Sport'}}
+              >Sport Article</Link></li>
+              <li><Link
+              onClick={() => {
+                window.location = '/topics/News'}}
+              >News Article</Link></li>
+              <li><Link
+              onClick={() => {
+                window.location = '/topics/Art'}}
+              >Art Article</Link></li>
             </ul>
           </li>
 
@@ -61,11 +70,6 @@ const Header = () => {
               Registration <i className="fas fa-plus" />{" "}
             </label>
             <input id="html" type="checkbox" />
-            {/* <ul className="sub-div">
-              <li><Link>Full Course</Link></li>
-              <li><Link>Crash Course</Link></li>
-              <li><Link>learn in 1h</Link></li>
-            </ul> */}
           </div>
           <div className="main-div">
             <label htmlFor="css">
@@ -74,18 +78,6 @@ const Header = () => {
             <input id="css" type="checkbox" />
             <ul className="sub-div">
               <li><Link>Log Out</Link></li>
-              {/* <li><Link>CSS Examples</Link></li>
-              <li>
-                <label className="mini-projects" htmlFor="mini">
-                  mini projects <i className="fas fa-plus" />{" "}
-                </label>
-                <input id="mini" type="checkbox" />
-                <ul className="sub-sub-div">
-                  <li><Link>project 1</Link></li>
-                  <li><Link>project 2</Link></li>
-                  <li><Link>project 3</Link></li>
-                </ul>
-              </li> */}
             </ul>
           </div>
           <div className="main-div">

@@ -3,7 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './container/Home';
 import Registration from './container/Registration';
 import Login from './container/Login';
-import Topics from './container/Topics';
+import TopicsSport from './container/TopicsSport';
+import TopicsNews from './container/TopicsNews';
+import TopicsArt from './container/TopicsArt';
+import TopicsDetails from './container/TopicsDetails';
 
 
 function App() {
@@ -11,11 +14,17 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Registration/>}></Route>
-          <Route path='/topics' element={<Topics/>}></Route>
+          <Route path='/' element={<Home/>}></Route>
           <Route path='/home' element={<Home/>}></Route>
           <Route path='/registration' element={<Registration/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
+          <Route path='/topics/Sport' element={<TopicsSport/>}></Route>
+          <Route path='/topics/News' element={<TopicsNews/>}></Route>
+          <Route path='/topics/Art' element={<TopicsArt/>}></Route>
+          <Route path='/topics/Sport/TopicsDetails' element={<TopicsDetails/>}></Route>
+          <Route path='/topics/News/TopicsDetails' element={<TopicsDetails/>}></Route>
+          <Route path='/topics/Art/TopicsDetails' element={<TopicsDetails/>}></Route>
+
         </Routes>
       </BrowserRouter>
     </div>

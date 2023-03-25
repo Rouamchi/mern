@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const deepPopulate = require('mongoose-deep-populate')(mongoose);
 const findVisible = require('./findVisible')
-const TopicsSchema = new mongoose.Schema({
+const TopicsSportSchema = new mongoose.Schema({
   title: String,
   text: String,
   section:{type:mongoose.Schema.Types.ObjectId, ref: 'Sections'},
@@ -20,15 +20,15 @@ const population = [{
   match: {isVisible: true}
 }]
 
-TopicsSchema.pre('find', findVisible(population));
-TopicsSchema.pre('findOne', findVisible(population));
-TopicsSchema.pre('findOneAndUpdate', findVisible());
-TopicsSchema.pre('count', findVisible());
-TopicsSchema.pre('countDocuments', findVisible());
+TopicsSportSchema.pre('find', findVisible(population));
+TopicsSportSchema.pre('findOne', findVisible(population));
+TopicsSportSchema.pre('findOneAndUpdate', findVisible());
+TopicsSportSchema.pre('count', findVisible());
+TopicsSportSchema.pre('countDocuments', findVisible());
 
 
-TopicsSchema.plugin(deepPopulate, {})
+TopicsSportSchema.plugin(deepPopulate, {})
 
-const Topics = mongoose.model('Topics', TopicsSchema, 'Topics')
+const TopicsSport = mongoose.model('TopicsSport', TopicsSportSchema, 'TopicsSport')
 
-module.exports = Topics
+module.exports = TopicsSport

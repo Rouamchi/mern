@@ -1,44 +1,44 @@
 const express = require('express');
 const router = express.Router();
-const Topics = require('../schemas/topics.schema');
+const topicsArt = require('../schemas/topicsArt.schema');
 
 /* GET users listing. */
 router.get('/', async function (req, res, next) {
   // const { member } = req.body
-  // const topics = await Topics.find({ member })
-  const topics = await Topics.find()
-  res.send(topics);
+  // const topicsArt = await topicsArt.find({ member })
+  const topicArt = await topicsArt.find()
+  res.send(topicArt);
 });
 
 router.post('/', async function (req, res, next) {
   const { title, text, section, member } = req.body
-  const newTopic = await Topics.create({
+  const newtopicArt = await topicsArt.create({
     title,
     text,
     section,
     member,
     createdAt: new Date(),
   })
-  res.send(newTopic)
+  res.send(newtopicArt)
 })
 
 router.put('/', async function (req, res, next) {
   const { title, text, _id } = req.body
-  const newTopic = await Topics.findByIdAndUpdate(_id,
+  const newtopicArt = await topicsArt.findByIdAndUpdate(_id,
     {
       title,
       text
     }, { new: true })
-  res.send(newTopic);
+  res.send(newtopicArt);
 })
 
 router.delete('/', async function (req, res, next) {
   const { _id } = req.body
-  const newTopic = await Topics.findByIdAndUpdate(_id,
+  const newtopicArt = await topicsArt.findByIdAndUpdate(_id,
     {
       isVisible: false
     }, { new: true })
-  res.send(newTopic);
+  res.send(newtopicArt);
 })
 
 module.exports = router;
