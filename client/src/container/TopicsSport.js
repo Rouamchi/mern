@@ -4,11 +4,12 @@ import Footer from "../components/Footer";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
+import { NavLink } from 'react-router-dom'
+import TopicDetails from "./TopicsDetails";
 import './Topics.css'
+
 
 export default function TopicsSport() {
 
@@ -17,7 +18,6 @@ export default function TopicsSport() {
   const [sections, setSections] = useState([])
   const [members, setMembers] = useState([])
   const [topicsSport, setTopicsSport] = useState([])
-  //const [error] = useState([])
 
   useEffect(() => {
     fetch(`${api}/sections`)
@@ -56,23 +56,17 @@ export default function TopicsSport() {
     <>
       <div className="Home-container">
         <Header />
-        <Stack direction="row" spacing={2}>
-          <Button variant="contained"
-          onClick={() => {window.location = '/CreateArticle'
-          }}>
-            Create A Sport Article
-          </Button>
-        </Stack>
+        <div className="createArticle" >
+          <NavLink className="create-article" onClick={() => {
+            window.location = '/CreateArticle'
+          }}>Create A Sport Article
+          </NavLink>
+        </div>
         <div className="cardstopics">
           {topicsSport.map(
             (topicSport) => {
               return (
                 <div>
-                  {/* <Card className="titleTopic">
-                    <Typography>
-                      <h4>Section : " Sport "</h4>
-                    </Typography>
-                  </Card> */}
                   <Card className="cardtopics" key={topicSport._id} sx={{ maxWidth: 345 }}>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
@@ -86,8 +80,8 @@ export default function TopicsSport() {
                       <Button size="small">Share</Button>
                       <Button key={topicSport._id} size="small"
                         onClick={() => {
+                          <TopicDetails title={topicSport.title} text={topicSport.text} />
                           window.location = '/topics/Sport/TopicsDetails'
-                          // window.location = `/topics/Sport/TopicDetails/${topicSport.title}`
                         }}
                       >Show Détails</Button>
                     </CardActions>

@@ -8,7 +8,7 @@
   margin-left: auto;
   border-radius: 20px;
   padding: 20px;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   /* background-color: transparent; */
@@ -16,7 +16,7 @@
 
 .cardtopics {
   /* border: 2px rgb(255, 0, 0) solid; */
-  display:block;
+  display: block;
   text-align: center;
   border: 1px solid gray;
   /* width: 80%; */
@@ -35,9 +35,10 @@
   justify-content: center;
   align-items: center;
 }
-.titleTopic{
+
+.titleTopic {
   /* border: 2px rgb(255, 0, 0) solid; */
-  display:block;
+  display: block;
   text-align: center;
   border: 1px solid gray;
   width: 50%;
@@ -50,27 +51,28 @@
   background-color: transparent;
   /* justify-content:space-around; */
   font-size: 30px;
-  font-weight:bolder;
+  font-weight: bolder;
   line-height: 50px;
   justify-content: center;
   align-items: center;
 
 }
 
-.card:hover{
-  /* color: white; */
-  border: 1px solid gray;
-  border-left: 8px solid gray;
-  background-color: transparent;
-}
-.titleTopic:hover{
+.card:hover {
   /* color: white; */
   border: 1px solid gray;
   border-left: 8px solid gray;
   background-color: transparent;
 }
 
-.member{
+.titleTopic:hover {
+  /* color: white; */
+  border: 1px solid gray;
+  border-left: 8px solid gray;
+  background-color: transparent;
+}
+
+.member {
   /* display:block; */
   text-align: center;
   /* border: 1px solid gray; */
@@ -82,7 +84,7 @@
   /* padding: 10px 20px; */
   color: rgb(77, 77, 77);
   transition: 0, 2s;
-  background-color: transparent; 
+  background-color: transparent;
   /* justify-content:space-around; */
   font-size: 15px;
   font-weight: bold;
@@ -90,6 +92,39 @@
   justify-content: center;
   align-items: center;
 }
+
+.create-article {
+  /* border: 2px red solid; */
+  background-color: #1b1b1b;
+  border-radius: 6px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.createArticle{
+  width: 15%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-article:hover {
+  color: orange;
+  box-shadow: 0 0 10px orange;
+  border-radius: 5px;
+}
+
+/* .create-article{
+width: 17%;
+margin-top: 20px;
+margin-left: auto;
+margin-right: auto;
+justify-content: center;
+align-items: center;
+} */
 
 
 /* .topicsbackground{

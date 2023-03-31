@@ -7,6 +7,7 @@ import TopicsSport from './container/TopicsSport';
 import TopicsNews from './container/TopicsNews';
 import TopicsArt from './container/TopicsArt';
 import TopicsDetails from './container/TopicsDetails';
+import CreateArticle from './container/CreateArticle';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/topics/Sport/TopicsDetails' element={<TopicsDetails/>}></Route>
           <Route path='/topics/News/TopicsDetails' element={<TopicsDetails/>}></Route>
           <Route path='/topics/Art/TopicsDetails' element={<TopicsDetails/>}></Route>
+          <Route path='/CreateArticle' element={<CreateArticle/>}></Route>
 
         </Routes>
       </BrowserRouter>

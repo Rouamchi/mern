@@ -6,12 +6,14 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
 import './Registration.css'
+
+
 
 function Registration() {
 
@@ -43,24 +45,24 @@ function Registration() {
 
   function click(e) {
     e.preventDefault();
-      Axios.post(url, {
-        username: data.username,
-        password: data.password,
-        fullname: data.fullname,
-        birthdate: data.birthdate,
-        email: data.email,
-        gender: data.gender
+    Axios.post(url, {
+      username: data.username,
+      password: data.password,
+      fullname: data.fullname,
+      birthdate: data.birthdate,
+      email: data.email,
+      gender: data.gender
+    })
+      .then(res => {
+        console.log(res.data)
+        setMessage(res.data.msg)
+        //if(data.ok){
+        window.location = '/login'
+        //}
       })
-        .then(res => {
-          console.log(res.data)
-          setMessage(res.data.msg)
-          //if(data.ok){
-          window.location = '/login'
-          //}
-        })
-        .catch((err) => {
-          console.log(err)
-        })
+      .catch((err) => {
+        console.log(err)
+      })
   }
   return (
     <>
@@ -74,6 +76,7 @@ function Registration() {
           <div className="textfield"><TextField id="birthdate" label="BirthDate" value={data.birthdate} onChange={(e) => { handle(e) }} /></div>
           <div className="textfield"><TextField id="email" label="Email" value={data.email} onChange={(e) => { handle(e) }} /></div>
           <div className="select">
+
             <Box>
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Gender</InputLabel>
@@ -82,15 +85,13 @@ function Registration() {
                   id="demo-simple-select"
                   value={gender}
                   label="Gender"
-                  onChange={handleChangeGender}
-
-                // onChange={(e) => { handle(e) }}
-                >
+                  onChange={handleChangeGender}>
                   <MenuItem value={10}>Male</MenuItem>
                   <MenuItem value={20}>Female</MenuItem>
                 </Select>
               </FormControl>
             </Box>
+        
           </div>
           <div className="send">
             <Stack direction="row" spacing={2}>

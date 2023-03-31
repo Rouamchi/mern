@@ -46,7 +46,8 @@ a {
 .navlink:hover{
   color: orange;
   box-shadow: 0 0 5px orange;
-  border-radius: 5px;}
+  border-radius: 5px;
+}
 
 html {
   box-sizing: border-box;

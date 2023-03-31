@@ -1,0 +1,94 @@
+.inputs {
+  /* border: 2px red solid; */
+  color: #1b1b1b;
+  height: calc(100vh - 128.64px);
+  /* margin-top: 100px; */
+
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 50px;
+
+  display: block;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  margin-top: 60px;
+}
+
+
+#outlined-basic {
+  /* border: 2px red solid; */
+  text-align: center;
+}
+
+.textfield {
+  margin-bottom: 6px;
+}
+
+
+.select {
+  /* border: 2px rgb(55, 0, 255) solid; */
+  text-align: center;
+  width: 224px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.send {
+  /* border: 2px rgb(55, 0, 255) solid; */
+
+  width: 96px;
+  margin: auto;
+  margin-top: 10px;
+
+  display: block;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+}
+
+.message{
+  /* border: 2px rgb(55, 0, 255) solid; */
+  font-size: 15px;
+  margin: auto;
+  margin-top: 10px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+  /* background-color: rgb(182, 181, 181); */
+  border-radius: 10px;
+}
+
+.registrationbackground{
+  top: 0;
+  /* bottom: 0; */
+  left: 0;
+  right: 0;
+  /* position:fixed; */
+  background-position: center;
+  background-image: url(../images/registrationbackground.avif);
+  background-size:cover;
+}
+
+.registration-title{
+  color: #1b1b1b;
+  text-shadow: 5px 5px 20px rgb(114, 114, 114);
+  margin-top: 80px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.body{
+  border: 2px solid red;
+  padding: 100px;
+}

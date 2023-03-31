@@ -5,7 +5,8 @@ import CardContent from '@mui/material/CardContent';
 // import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
+import { NavLink } from 'react-router-dom'
+import TopicDetails from "./TopicsDetails";
 import './Topics.css'
 
 import Header from "../components/Header";
@@ -56,14 +57,12 @@ export default function TopicsArt() {
     <>
       <div className="Home-container">
         <Header />
-        <Stack direction="row" spacing={2}>
-          <Button variant="contained"
-            onClick={() => {
-              window.location = '/CreateArticle'
-            }}>
-            Create An Art Article
-          </Button>
-        </Stack>
+        <div className="createArticle" >
+          <NavLink className="create-article" onClick={() => {
+            window.location = '/CreateArticle'
+          }}>Create A Art Article
+          </NavLink>
+        </div>
         <div className="cardstopics">
           {topicsArt.map(
             (topicArt) => {
@@ -87,6 +86,7 @@ export default function TopicsArt() {
                       <Button size="small">Share</Button>
                       <Button key={topicArt._id} size="small"
                         onClick={() => {
+                          <TopicDetails title={topicArt.title} text={topicArt.text} />
                           window.location = '/topics/Art/TopicsDetails'
                         }}
                       >Show Détails</Button>
