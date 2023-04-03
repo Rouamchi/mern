@@ -86,7 +86,6 @@ export default function TopicsNews() {
                       <Button size="small">Share</Button>
                       <Button key={topicNews._id} size="small"
                         onClick={() => {
-                          <TopicDetails title={topicNews.title} text={topicNews.text} />
                           window.location = '/topics/News/TopicsDetails'
                         }}
                       >Show Détails</Button>

@@ -1,15 +1,13 @@
 // import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import { NavLink } from 'react-router-dom'
+import TopicsSport from "./TopicsSport";
+// import TopicsNews from "./TopicsNews";
+// import TopicsArt from "./TopicsArt"
 import './TopicDetails.css'
 
-export default function TopicDetails({ title, text }) {
+export default function TopicDetails({topicSport, topicNews, topicArt}) {
 
   return (
     <>
@@ -23,19 +21,7 @@ export default function TopicDetails({ title, text }) {
         </div>
         <div className="cardstopics">
           <div>
-            <Card className="cardtopics" sx={{ maxWidth: 345 }}>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary" >
-                  {text}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Share</Button>
-              </CardActions>
-            </Card>
+            <TopicsSport/>
           </div>
         </div>
 

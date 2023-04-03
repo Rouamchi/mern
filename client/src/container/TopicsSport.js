@@ -7,7 +7,6 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { NavLink } from 'react-router-dom'
-import TopicDetails from "./TopicsDetails";
 import './Topics.css'
 
 
@@ -80,7 +79,6 @@ export default function TopicsSport() {
                       <Button size="small">Share</Button>
                       <Button key={topicSport._id} size="small"
                         onClick={() => {
-                          <TopicDetails title={topicSport.title} text={topicSport.text} />
                           window.location = '/topics/Sport/TopicsDetails'
                         }}
                       >Show Détails</Button>
