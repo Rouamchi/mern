@@ -3,8 +3,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { NavLink } from 'react-router-dom'
 import TopicsSport from "./TopicsSport";
-// import TopicsNews from "./TopicsNews";
-// import TopicsArt from "./TopicsArt"
+import TopicsNews from "./TopicsNews";
+import TopicsArt from "./TopicsArt"
 import './TopicDetails.css'
 
 export default function TopicDetails({topicSport, topicNews, topicArt}) {
@@ -22,6 +22,8 @@ export default function TopicDetails({topicSport, topicNews, topicArt}) {
         <div className="cardstopics">
           <div>
             <TopicsSport/>
+            <TopicsNews/>
+            <TopicsArt/>
           </div>
         </div>
 
