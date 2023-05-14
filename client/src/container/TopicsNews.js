@@ -68,11 +68,6 @@ export default function TopicsNews() {
             (topicNews) => {
               return (
                 <div>
-                  {/* <Card className="titleTopic">
-                    <Typography className="member">
-                      <h4> Section : " News "</h4>
-                    </Typography>
-                  </Card> */}
                   <Card className="cardtopics" key={topicNews._id} sx={{ maxWidth: 345 }}>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
@@ -86,7 +81,7 @@ export default function TopicsNews() {
                       <Button size="small">Share</Button>
                       <Button key={topicNews._id} size="small"
                         onClick={() => {
-                          window.location = '/topics/News/TopicsDetails'
+                          window.location = `/topics/News/TopicsDetails/${topicNews._id}`
                         }}
                       >Show Détails</Button>
                     </CardActions>

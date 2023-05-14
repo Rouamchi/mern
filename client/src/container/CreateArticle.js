@@ -50,7 +50,7 @@ function CreateArticle() {
     const newdata = { ...data }
     newdata[e.target.id] = e.target.value
     setData(newdata)
-    console.log(newdata)
+    
   }
 
   function click(e) {
@@ -94,4 +94,6 @@ function CreateArticle() {
     </>
   );
 }
+
+
 export default CreateArticle;

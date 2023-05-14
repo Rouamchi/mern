@@ -6,7 +6,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import './Topics.css'
 
 
@@ -31,7 +31,7 @@ export default function TopicsSport() {
 
   useEffect(() => {
     fetch(`${api}/members`)
-      .then(response => response.json())
+      .then(response => response.json()) 
       .then(res => setMembers(res))
       .catch((err) => {
         console.log(err)
@@ -55,7 +55,7 @@ export default function TopicsSport() {
     <>
       <div className="Home-container">
         <Header />
-        <div className="createArticle" >
+        <div className="createArticle">
           <NavLink className="create-article" onClick={() => {
             window.location = '/CreateArticle'
           }}>Create A Sport Article
@@ -71,7 +71,7 @@ export default function TopicsSport() {
                       <Typography gutterBottom variant="h5" component="div">
                         {topicSport.title}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary" >
+                      <Typography variant="body2" color="text.secondary">
                         {topicSport.text}
                       </Typography>
                     </CardContent>
@@ -79,7 +79,7 @@ export default function TopicsSport() {
                       <Button size="small">Share</Button>
                       <Button key={topicSport._id} size="small"
                         onClick={() => {
-                          window.location = '/topics/Sport/TopicsDetails'
+                          window.location = `/topics/Sport`
                         }}
                       >Show Détails</Button>
                     </CardActions>

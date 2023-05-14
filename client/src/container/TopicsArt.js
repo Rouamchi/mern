@@ -86,7 +86,7 @@ export default function TopicsArt() {
                       <Button size="small">Share</Button>
                       <Button key={topicArt._id} size="small"
                         onClick={() => {
-                          window.location = '/topics/Art/TopicsDetails'
+                          window.location = `/topics/Art/TopicsDetails/${topicArt._id}`
                         }}
                       >Show Détails</Button>
                     </CardActions>
